@@ -5,6 +5,9 @@ package pages;
 //This class will be used as Base Page Instance 
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+
+import java.time.Duration;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -29,6 +32,7 @@ public class WebBase {
         baseWebDriver = new ChromeDriver(chromeTestOptions);
         baseWebDriver.manage().deleteAllCookies();
         baseWebDriver.manage().window().maximize();
+        baseWebDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
         baseWebDriver.get(url);
         return baseWebDriver;
 

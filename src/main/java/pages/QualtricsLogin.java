@@ -1,5 +1,6 @@
 package pages;
 
+
 // This page is the Qualtrics Login Representation as Java Class for POM design pattern
 
 
@@ -47,7 +48,7 @@ public class QualtricsLogin {
         userNameInput.sendKeys(user);
         passwordInput.sendKeys(password);
         loginButton.click();
-       
+        
     }
 
 }
